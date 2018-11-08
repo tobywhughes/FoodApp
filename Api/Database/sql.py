@@ -4,6 +4,14 @@ def build_select(table, wheres):
         s += " WHERE " + where + " = ?"
     return s
 
+def build_update(table, changes):
+    s = "UPDATE " + table + " SET"
+    for change in changes:
+        s += " " + change + " = ?"
+    s += " WHERE id = ?"
+
+    return s
+
 def create_return_dict(cursor):
     result = cursor.fetchall()
     col_names = [description[0] for description in cursor.description]

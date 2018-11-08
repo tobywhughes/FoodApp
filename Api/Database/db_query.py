@@ -51,7 +51,7 @@ def query_order(id, rid, pid, connection, cursor):
         n_ = []
         t_ = []
         if id is not None:
-            n_.append('id')
+            n_.append('order_parent.id')
             t_.append(id)
         if rid is not None:
             n_.append('rid')
