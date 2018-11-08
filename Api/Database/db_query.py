@@ -32,13 +32,21 @@ def query_menu(id, rid, connection, cursor):
 
 
 @db_connect
-def query_profile(id, connection, cursor):
-    if id is not None:
-        execute_string = build_select('profile', ['id'])
-        cursor.execute(execute_string, (id,))
-    else:
+def query_profile(id, username, connection, cursor):
+    if id is None and username is None:
         execute_string = build_select('profile', [])
         cursor.execute(execute_string)
+    else:
+        n_ = []
+        t_ = []
+        if id is not None:
+            n_.append('id')
+            t_.append(id)
+        if username is not None:
+            n_.append('username')
+            t_.append(username)
+        execute_string = build_select('profile', n_)
+        cursor.execute(execute_string, t_)
     return create_return_dict(cursor)
 
 @db_connect

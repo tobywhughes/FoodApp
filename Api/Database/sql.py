@@ -12,6 +12,14 @@ def build_update(table, changes):
 
     return s
 
+def build_insert(table, fields):
+    s = "INSERT INTO " + table + "("
+    s += ", ".join(fields)
+    s += ") VALUES ("
+    s += ", ".join(['?'] * len(fields))
+    s += ")"
+    return s
+
 def create_return_dict(cursor):
     result = cursor.fetchall()
     col_names = [description[0] for description in cursor.description]
