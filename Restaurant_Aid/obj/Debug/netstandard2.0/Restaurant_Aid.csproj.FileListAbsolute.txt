@@ -1,0 +1,15 @@
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\bin\Debug\netstandard2.0\Restaurant_Aid.deps.json
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\bin\Debug\netstandard2.0\Restaurant_Aid.dll
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\bin\Debug\netstandard2.0\Restaurant_Aid.pdb
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\CustomerPage.xaml.g.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\RestaurantPage.xaml.g.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\TabContainer.xaml.g.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.csproj.CoreCompileInputs.cache
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.AssemblyInfoInputs.cache
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.AssemblyInfo.cs
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.dll
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.pdb
+C:\Users\VessirAverisk\source\repos\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.csprojResolveAssemblyReference.cache
