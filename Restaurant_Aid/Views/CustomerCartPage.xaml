@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Restaurant_Aid.Views.CustomerCartPage">
+             x:Class="Restaurant_Aid.Views.CustomerCartPage"
+             Title="Cart">
 
     <ContentPage.Content>
         <StackLayout>

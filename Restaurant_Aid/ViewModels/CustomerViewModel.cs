@@ -45,7 +45,7 @@ namespace Restaurant_Aid.ViewModels
         public CustomerViewModel(INavigationService navigationService)
         {
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(CustomerViewModel)}:  ctor");
-            Title = "Customer";
+            Title = "Customer Main Page";
 
             _navigationService = navigationService;
             NavigateToCustomerCartPageCommand = new DelegateCommand(OnNavigateToCustomerCart);

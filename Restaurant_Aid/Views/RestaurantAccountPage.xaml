@@ -6,29 +6,32 @@
     xmlns:control="clr-namespace:Restaurant_Aid.Controls"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:Class="Restaurant_Aid.Views.RestaurantAccountPage"
-    x:Name="RestaurantAccount">
+    x:Name="Restaurant_Account"
+    Title="R_Account">
 
-    <Grid x:Grid.Column="1"
-          ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 Spacing="10">
 
-    
-    <!-- <control:InputControl x:Grid.Column="0"
-                              x:Grid.ColumnSpan="2"
-                              x:Grid.Row="0"
-                              Caption="RestaurantName:"
-                              Value="{Binding RestuarantAccountPageViewModel.Name, Mode=TwoWay}" 
-                              />
-    -->
+        <Label
+            Text="Restaurant: The Za Place" />
 
-    </Grid>
- 
+        <Label
+            Text="ID: Za91224" />
+
+        <Label>
+            <Label.Text>
+                Address: 15935 Pepperoni Way
+                Cheeseville, CA 35715
+            </Label.Text>
+        </Label>
+
+
+
+
+    </StackLayout>
+
+
+
 
 </ContentPage>
