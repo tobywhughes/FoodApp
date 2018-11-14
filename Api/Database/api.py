@@ -20,7 +20,6 @@ def restaurant():
         return "Valid"
     elif request.method == 'PUT':
         f = {key:value[0] for key,value in dict(request.form).items()}
-        print(f)
         update_restaurant(int(request.args['id']), f)
         return "Valid"
     elif request.method == 'DELETE':
@@ -28,7 +27,7 @@ def restaurant():
         if 'id' in request.args:
             id = request.args['id']
         delete_restaurant(int(id))
-        print("Valid")
+        return "Valid"
 
     return 'not implemented'
 
@@ -44,6 +43,20 @@ def menu():
             rid = request.args['rid']
 
         return json.dumps(query_menu(id, rid))
+    elif request.method == 'POST':
+        f = request.form
+        insert_menu_item(f['name'], f['price'], f['rid'])
+        return 'VALID'
+    elif request.method == 'PUT':
+        f = {key:value[0] for key,value in dict(request.form).items()}
+        update_menu_item(int(request.args['id']), f)
+        return "Valid"
+    elif request.method == 'DELETE':
+        id = None
+        if 'id' in request.args:
+            id = request.args['id']
+        delete_menu(int(id))
+        return "Valid"
     return 'not implemented'
 
 @app.route('/profile', methods=['GET', 'POST', 'PUT', 'DELETE'])
