@@ -4,11 +4,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Restaurant_Aid.Views.CustomerPage"
     Title="{Binding Title}">
-    <ContentPage.Content>
+
+    <StackLayout
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand">
+
         <Label
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand"
             BackgroundColor="Yellow"
             Text="{Binding Title}" />
-    </ContentPage.Content>
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerAccount"
+            Command="{Binding NavigateToCustomerAccountPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerCart"
+            Command="{Binding NavigateToCustomerCartPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerMenu"
+            Command="{Binding NavigateToCustomerMenuPageCommand}" />
+
+    </StackLayout>
+
+
 </ContentPage>

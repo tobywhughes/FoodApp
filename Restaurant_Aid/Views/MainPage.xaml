@@ -12,9 +12,15 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="Tabbing Time"
-            Command="{Binding NavigateToTabContainerCommand}" />
+            Text="Customer Login"
+            Command="{Binding NavigateToCustomerCommand}" />
 
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Restaurant Login"
+            Command="{Binding NavigateToRestaurantCommand}" />
+        
     </StackLayout>
     
 </ContentPage>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using Restaurant_Aid.Views;
+using Restaurant_Aid.Controls;
 using Xamarin.Forms;
 
 namespace Restaurant_Aid.ViewModels
@@ -14,7 +15,8 @@ namespace Restaurant_Aid.ViewModels
     public class MainPageViewModel : BindableBase, INavigationAware
     {
         INavigationService _navigationService;
-        public DelegateCommand NavigateToTabContainerCommand { get; set; }
+        public DelegateCommand NavigateToCustomerCommand { get; set; }
+        public DelegateCommand NavigateToRestaurantCommand { get; set; }
 
         private string _title;
         public string Title
@@ -28,15 +30,23 @@ namespace Restaurant_Aid.ViewModels
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(MainPageViewModel)}:  ctor");
 
             _navigationService = navigationService;
-            NavigateToTabContainerCommand = new DelegateCommand(OnNavigateToTabContainer);
+            NavigateToCustomerCommand = new DelegateCommand(OnNavigateToCustomer);
+            NavigateToRestaurantCommand = new DelegateCommand(OnNavigateToRestaurant);
             Title = "Main Page";
         }
 
-        private void OnNavigateToTabContainer()
+        private void OnNavigateToRestaurant()
         {
-            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToTabContainer)}");
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToRestaurant)}");
 
-            _navigationService.NavigateAsync(nameof(TabContainer));
+            _navigationService.NavigateAsync(nameof(RestaurantPage));
+        }
+
+        private void OnNavigateToCustomer()
+        {
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToCustomer)}");
+
+            _navigationService.NavigateAsync(nameof(CustomerPage));
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)
