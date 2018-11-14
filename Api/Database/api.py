@@ -1,4 +1,7 @@
 from db_query import *
+from db_insert import *
+from db_update import *
+from db_delete import *
 import json
 
 from flask import Flask, request
@@ -11,6 +14,22 @@ def restaurant():
         if 'id' in request.args:
             id = request.args['id']
         return json.dumps(query_restaurant(id))
+    elif request.method == 'POST':
+        f = request.form
+        insert_restaurant(f['name'], f['username'], f['passhash'], f['address'], f['phone'], f['gps_loc'])
+        return "Valid"
+    elif request.method == 'PUT':
+        f = {key:value[0] for key,value in dict(request.form).items()}
+        print(f)
+        update_restaurant(int(request.args['id']), f)
+        return "Valid"
+    elif request.method == 'DELETE':
+        id = None
+        if 'id' in request.args:
+            id = request.args['id']
+        delete_restaurant(int(id))
+        print("Valid")
+
     return 'not implemented'
 
 @app.route('/menu', methods=['GET', 'POST', 'PUT', 'DELETE'])
