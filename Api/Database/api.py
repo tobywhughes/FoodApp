@@ -71,6 +71,16 @@ def profile():
             username = request.args['username']
 
         return json.dumps(query_profile(id, username))
+    elif request.method == 'POST':
+        f = request.form
+        insert_profile(f['username'], f['passhash'])
+        return 'VALID'
+    elif request.method == 'DELETE':
+        id = None
+        if 'id' in request.args:
+            id = request.args['id']
+        delete_profile(int(id))
+        return "Valid"
     return 'not implemented'
 
 @app.route('/order', methods=['GET', 'POST', 'PUT', 'DELETE'])
