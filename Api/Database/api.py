@@ -98,6 +98,20 @@ def order():
             pid = request.args['pid']
 
         return json.dumps(query_order(id, rid, pid))
+    elif request.method == 'POST':
+        f = request.form
+        mids = f['mids'].split(',')
+        insert_order(f['status'], f['detail'], f['rid'], f['pid'], mids)
+    elif request.method == 'PUT':
+        f = request.form
+        update_order(int(request.args['id']), f['status'])
+        return "Valid"
+    elif request.method == 'DELETE':
+        id = None
+        if 'id' in request.args:
+            id = request.args['id']
+        delete_order(int(id))
+        return "Valid"
     return 'not implemented'
 
 @app.route('/alert', methods=['GET', 'POST', 'PUT', 'DELETE'])
