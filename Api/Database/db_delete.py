@@ -55,7 +55,7 @@ def delete_order_by_pid(id, connection, cursor):
 def delete_alert(id, connection, cursor):
     if id is None:
         raise ValueError
-    cursor.execute('DELETE FROM alert WHERE id = ?', (id, ))
+    cursor.execute('DELETE FROM alerts WHERE id = ?', (id, ))
 
 
 if __name__ == "__main__":

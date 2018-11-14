@@ -132,6 +132,19 @@ def alert():
             status = request.args['status']
 
         return json.dumps(query_alert(id, rid, pid, status))
+    elif request.method == 'POST':
+        f = request.form
+        insert_alert(f['status'], f['detail'], f['rid'], f['pid'])
+    elif request.method == 'PUT':
+        f = request.form
+        update_alert(int(request.args['id']), f['status'])
+        return "Valid"
+    elif request.method == 'DELETE':
+        id = None
+        if 'id' in request.args:
+            id = request.args['id']
+        delete_alert(int(id))
+        return "Valid"
     return 'not implemented'
 
 if __name__ == "__main__":
